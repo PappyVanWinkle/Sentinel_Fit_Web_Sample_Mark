@@ -531,7 +531,7 @@ void ledtoggle(int led)
     www.println("<body>");
     print_http_title();
 
-    status = do_consume_license(led+10); //Feature 11 = LED1 ("Green"; GPIO_PIN_1), Feature 12 = LED2 ("Blue"; GPIO_PIN_0)
+    status = do_consume_license(led+110); //Feature 111 = LED1 ("Green"; GPIO_PIN_1), Feature 112 = LED2 ("Blue"; GPIO_PIN_0)
 
     if (status == FIT_STATUS_OK) {
 		strcpy(color, "#00C000"); //Green color

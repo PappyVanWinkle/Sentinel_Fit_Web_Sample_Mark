@@ -125,7 +125,10 @@ const char www_script[] =
 "for (j=0;j<fa.length;j++){\n"
 "f=parseInt(fa[j]);\n"
 "if(!isNaN(f))\n"
-"o+=\"Feature \"+f+\"<br>\";\n"
+"o+=\"Feature \"+f;\n"
+        "if(f==111) o+=\" (Green)\";\n"
+        "if(f==112) o+=\" (Blue)\";\n"
+        "o+=\"<br>\""
 "}\n"
 "o+=\"</td></tr>\";\n"
 "if(i<n-1) o+=\"<tr><td colspan=\\\"4\\\">&nbsp;</td></tr>\";\n"
@@ -193,7 +196,7 @@ const char www_form[] =
 		"<td><button type=\"submit\">Toggle Green</button></td>\n" // LED1
 		"</form>\n"
 		"<form action=\"/led2toggle\" method=\"get\">\n"
-//		"<td><buttonBlue type=\"submit\">Toggle Blue</button></td>\n" // LED2
+//		"<td><buttonBlue type=\"submit\">Toggle Blue</buttonBlue></td>\n" // LED2
         "<td><button type=\"submit\">Toggle Blue</button></td>\n" // LED2
 		"</tr>\n"
 		"</form>\n"
